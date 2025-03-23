@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+h1, h2, h3, h4, h5, h6 {
+            color: var(--body-heading-color);
+            font-weight: normal;
+        }<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +9,26 @@
     <title>Your Name - Developer Portfolio</title>
     <style>
         :root {
-            /* Four-color gradient theme */
-            --header-bg-start: #159957;
-            --header-bg-mid1: #155799;
-            --header-bg-mid2: #9933CC;
-            --header-bg-end: #FF3366;
-            --section-headings-color: #9933CC;
+            /* Color palette from coolors.co */
+            --sage-green: #C9CBA3;       /* Sage green */
+            --warm-beige: #FFE1A8;       /* Warm beige */
+            --terracotta: #E26D5C;       /* Terracotta red */
+            --burgundy: #723D46;         /* Burgundy */
+            --deep-brown: #472D30;       /* Deep brown */
+            
+            /* Theme color assignments */
+            --header-bg-start: var(--terracotta);
+            --header-bg-end: var(--warm-beige);
+            --section-headings-color: var(--burgundy);
+            --body-text-color: var(--deep-brown);
+            --body-heading-color: var(--burgundy);
+            --body-link-color: var(--terracotta);
+            --body-link-color-hover: var(--burgundy);
+            --body-bg-color: #FFF9F0;    /* Off-white with a hint of warmth */
+            --border-color: var(--sage-green);
+            --code-bg-color: #F8F7F0;    /* Very light sage */
+            --code-text-color: var(--deep-brown);
+            --transition: all 0.3s ease;
             --body-text-color: #606c71;
             --body-heading-color: #222;
             --body-link-color: #1e6bb8;
@@ -32,25 +49,25 @@
         body {
             font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
             background-color: var(--body-bg-color);
-            color: var(--body-text-color);
+            color: #472D30;
             line-height: 1.6;
         }
         
         a {
-            color: var(--body-link-color);
+            color: var(--terracotta);
             text-decoration: none;
             transition: var(--transition);
         }
         
         a:hover {
-            color: var(--body-link-color-hover);
+            color: var(--burgundy);
             text-decoration: underline;
         }
         
         header {
             padding: 100px 20px 60px;
             text-align: center;
-            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-mid1), var(--header-bg-mid2), var(--header-bg-end));
+            background: linear-gradient(135deg, #723D46, #E26D5C);
             color: white;
         }
         
@@ -87,12 +104,12 @@
             text-decoration: none;
             padding: 8px 15px;
             border-radius: 5px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(201, 203, 163, 0.3);
             transition: var(--transition);
         }
         
         .social-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(114, 61, 70, 0.6);
             transform: translateY(-3px);
             text-decoration: none;
         }
@@ -111,15 +128,15 @@
             font-size: 1.8rem;
             margin-bottom: 25px;
             padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--section-headings-color);
+            border-bottom: 1px solid #C9CBA3;
+            color: #723D46;
             font-weight: normal;
         }
         
         h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--section-headings-color);
+            color: #723D46;
             font-weight: normal;
         }
         
@@ -137,9 +154,9 @@
             background: var(--body-bg-color);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(71, 45, 48, 0.08);
             transition: var(--transition);
-            border: 1px solid var(--border-color);
+            border: 1px solid #C9CBA3;
         }
         
         .project-card:hover {
@@ -175,8 +192,9 @@
         }
         
         .tag {
-            background: var(--code-bg-color);
-            color: var(--code-text-color);
+            background: #F8F7F0;
+            border: 1px solid #C9CBA3;
+            color: #E26D5C;
             padding: 3px 10px;
             border-radius: 15px;
             font-size: 0.8rem;
@@ -185,7 +203,7 @@
         .btn {
             display: inline-block;
             padding: 8px 15px;
-            background-color: var(--header-bg-mid2);
+            background-color: #E26D5C;
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -194,20 +212,23 @@
         }
         
         .btn:hover {
-            background-color: #8022b0;
+            background-color: #723D46;
+            text-decoration: none;
+        }
             text-decoration: none;
         }
         
         .btn-outline {
             background-color: transparent;
-            border: 1px solid var(--header-bg-mid2);
-            color: var(--header-bg-mid2);
+            border: 1px solid #E26D5C;
+            color: #E26D5C;
             margin-left: 10px;
         }
         
         .btn-outline:hover {
-            background-color: rgba(153, 51, 204, 0.1);
-            color: var(--header-bg-mid2);
+            background-color: rgba(226, 109, 92, 0.1);
+            color: #723D46;
+            text-decoration: none;
         }
         
         .skills {
@@ -227,13 +248,13 @@
         
         .skill-list li {
             padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid rgba(201, 203, 163, 0.4);
         }
         
         .experience-item {
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #C9CBA3;
         }
         
         .experience-item:last-child {
@@ -248,7 +269,7 @@
         
         .experience-company {
             font-weight: 500;
-            color: #b83681;
+            color: #E26D5C;
         }
         
         .experience-date {
@@ -268,7 +289,7 @@
             border-radius: 8px;
             max-width: 600px;
             margin: 0 auto;
-            border: 1px solid var(--border-color);
+            border: 1px solid #C9CBA3;
         }
         
         .form-group {
@@ -285,7 +306,7 @@
         input, textarea {
             width: 100%;
             padding: 10px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #C9CBA3;
             border-radius: 4px;
             font-family: inherit;
             font-size: 1rem;
@@ -298,7 +319,7 @@
         }
         
         button {
-            background-color: var(--header-bg-mid2);
+            background-color: #E26D5C;
             color: white;
             border: none;
             padding: 12px 20px;
@@ -310,13 +331,13 @@
         }
         
         button:hover {
-            background-color: #8022b0;
+            background-color: #723D46;
         }
         
         footer {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-mid1), var(--header-bg-mid2), var(--header-bg-end));
+            background: linear-gradient(135deg, #723D46, #E26D5C);
             color: white;
             margin-top: 40px;
         }
@@ -325,7 +346,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: var(--header-bg-mid2);
+            background: #E26D5C;
             color: white;
             width: 50px;
             height: 50px;
@@ -342,6 +363,7 @@
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             text-decoration: none;
+            background: #723D46;
         }
         
         @media (max-width: 768px) {
