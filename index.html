@@ -6,10 +6,12 @@
     <title>Your Name - Developer Portfolio</title>
     <style>
         :root {
-            /* Cayman theme colors */
+            /* Four-color gradient theme */
             --header-bg-start: #159957;
-            --header-bg-end: #155799;
-            --section-headings-color: #159957;
+            --header-bg-mid1: #155799;
+            --header-bg-mid2: #9933CC;
+            --header-bg-end: #FF3366;
+            --section-headings-color: #9933CC;
             --body-text-color: #606c71;
             --body-heading-color: #222;
             --body-link-color: #1e6bb8;
@@ -48,7 +50,7 @@
         header {
             padding: 100px 20px 60px;
             text-align: center;
-            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-end));
+            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-mid1), var(--header-bg-mid2), var(--header-bg-end));
             color: white;
         }
         
@@ -183,7 +185,7 @@
         .btn {
             display: inline-block;
             padding: 8px 15px;
-            background-color: var(--header-bg-start);
+            background-color: var(--header-bg-mid2);
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -192,20 +194,20 @@
         }
         
         .btn:hover {
-            background-color: #12864e;
+            background-color: #8022b0;
             text-decoration: none;
         }
         
         .btn-outline {
             background-color: transparent;
-            border: 1px solid var(--header-bg-start);
-            color: var(--header-bg-start);
+            border: 1px solid var(--header-bg-mid2);
+            color: var(--header-bg-mid2);
             margin-left: 10px;
         }
         
         .btn-outline:hover {
-            background-color: rgba(21, 153, 87, 0.1);
-            color: var(--header-bg-start);
+            background-color: rgba(153, 51, 204, 0.1);
+            color: var(--header-bg-mid2);
         }
         
         .skills {
@@ -246,7 +248,7 @@
         
         .experience-company {
             font-weight: 500;
-            color: var(--header-bg-start);
+            color: #b83681;
         }
         
         .experience-date {
@@ -296,7 +298,7 @@
         }
         
         button {
-            background-color: var(--header-bg-start);
+            background-color: var(--header-bg-mid2);
             color: white;
             border: none;
             padding: 12px 20px;
@@ -308,13 +310,13 @@
         }
         
         button:hover {
-            background-color: #12864e;
+            background-color: #8022b0;
         }
         
         footer {
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-end));
+            background: linear-gradient(120deg, var(--header-bg-start), var(--header-bg-mid1), var(--header-bg-mid2), var(--header-bg-end));
             color: white;
             margin-top: 40px;
         }
@@ -323,7 +325,7 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background: var(--header-bg-start);
+            background: var(--header-bg-mid2);
             color: white;
             width: 50px;
             height: 50px;
