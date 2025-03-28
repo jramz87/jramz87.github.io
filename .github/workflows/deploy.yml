@@ -39,6 +39,9 @@ jobs:
 
       - name: Create .nojekyll file
         run: touch build/.nojekyll
+        
+      - name: Remove source map references
+        run: find build -name "*.js" -exec sed -i -e 's/\/\/# sourceMappingURL=.*$//' {} \;
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
