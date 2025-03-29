@@ -1,12 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useParams, Link } from 'react-router-dom';
-import nanoImage from '../assets/images/nanoImage.jpeg';
-import defense from '../assets/images/defense.png';
 import lasers from '../assets/images/lasers.png';
-import mtnSports from '../assets/images/maiden.jpg';
-import martialArts from '../assets/images/bjj.jpeg';
-import ropeAccess from '../assets/images/ropepartner.JPG';
 
 // Define content for each project
 const projectData = {
