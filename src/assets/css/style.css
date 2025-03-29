@@ -531,7 +531,7 @@ text-align: center;
     display: block !important; /* Force display */
     scale: 1.5;
     max-width: 40%;
-    transform: translateX(-5%);
+    transform: translateX(-10%);
 }
 
 /* Active item styling */
