@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import '../assets/css/style.css';
 
 function CircularPublicationsCarousel({ publications }) {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -92,7 +93,29 @@ function CircularPublicationsCarousel({ publications }) {
                                 View Publication
                             </Button>
                         </div>
+                        
+                        {/* Navigation Controls - Using the wrapper from your CSS */}
                     </div>
+
+                                            <div className="carousel-controls-wrapper">
+                            <div className="carousel-controls">
+                                <button className="carousel-control prev" onClick={goToPrev}>
+                                    <span>&#10094;</span>
+                                </button>
+                                <div className="carousel-indicators">
+                                    {publications.map((_, index) => (
+                                        <span 
+                                            key={index} 
+                                            className={`indicator ${index === activeIndex ? 'active' : ''}`}
+                                            onClick={() => setActiveIndex(index)}
+                                        />
+                                    ))}
+                                </div>
+                                <button className="carousel-control next" onClick={goToNext}>
+                                    <span>&#10095;</span>
+                                </button>
+                            </div>
+                        </div>
                 </div>
                 
                 {/* Next Publication */}
@@ -112,27 +135,6 @@ function CircularPublicationsCarousel({ publications }) {
                             )}
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            {/* Navigation Controls - Using the wrapper from your CSS */}
-            <div className="carousel-controls-wrapper">
-                <div className="carousel-controls">
-                    <button className="carousel-control prev" onClick={goToPrev}>
-                        <span>&#10094;</span>
-                    </button>
-                    <div className="carousel-indicators">
-                        {publications.map((_, index) => (
-                            <span 
-                                key={index} 
-                                className={`indicator ${index === activeIndex ? 'active' : ''}`}
-                                onClick={() => setActiveIndex(index)}
-                            />
-                        ))}
-                    </div>
-                    <button className="carousel-control next" onClick={goToNext}>
-                        <span>&#10095;</span>
-                    </button>
                 </div>
             </div>
         </div>

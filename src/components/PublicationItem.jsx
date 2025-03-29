@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { OverlayTrigger, Tooltip, Button, Collapse } from 'react-bootstrap';
+import '../assets/css/style.css';
 
 function PublicationItem({ id, title, authors, journal, year, abstract, link, firstPageImage }) {
     const [open, setOpen] = useState(false);

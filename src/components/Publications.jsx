@@ -3,6 +3,7 @@ import { Container, Button, Collapse } from 'react-bootstrap';
 import PublicationItem from './PublicationItem';
 import CircularPublicationsCarousel from './CircularPublicationsCarousel';
 import { publications } from '../data/publications';
+import '../assets/css/style.css';
 
 function Publications() {
     const [showAllPublications, setShowAllPublications] = useState(false);
