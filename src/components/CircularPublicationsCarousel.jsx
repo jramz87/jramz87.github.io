@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap';
 
 function CircularPublicationsCarousel({ publications }) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
     
     const totalPublications = publications.length;
     
@@ -116,23 +115,25 @@ function CircularPublicationsCarousel({ publications }) {
                 </div>
             </div>
             
-            {/* Navigation Controls */}
-            <div className="carousel-controls">
-                <button className="carousel-control prev" onClick={goToPrev}>
-                    <span>&#10094;</span>
-                </button>
-                <div className="carousel-indicators">
-                    {publications.map((_, index) => (
-                        <span 
-                            key={index} 
-                            className={`indicator ${index === activeIndex ? 'active' : ''}`}
-                            onClick={() => setActiveIndex(index)}
-                        />
-                    ))}
+            {/* Navigation Controls - Using the wrapper from your CSS */}
+            <div className="carousel-controls-wrapper">
+                <div className="carousel-controls">
+                    <button className="carousel-control prev" onClick={goToPrev}>
+                        <span>&#10094;</span>
+                    </button>
+                    <div className="carousel-indicators">
+                        {publications.map((_, index) => (
+                            <span 
+                                key={index} 
+                                className={`indicator ${index === activeIndex ? 'active' : ''}`}
+                                onClick={() => setActiveIndex(index)}
+                            />
+                        ))}
+                    </div>
+                    <button className="carousel-control next" onClick={goToNext}>
+                        <span>&#10095;</span>
+                    </button>
                 </div>
-                <button className="carousel-control next" onClick={goToNext}>
-                    <span>&#10095;</span>
-                </button>
             </div>
         </div>
     );
