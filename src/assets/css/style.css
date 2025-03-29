@@ -274,6 +274,24 @@ a:hover .tag {
     color: var(--body-text-color);
 }
 
+.project-detail-card {
+    overflow: hidden;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    min-height: 300px;
+}
+
+.project-detail-img {
+    max-height: 380px;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Skills */
 .skills {
     display: flex;

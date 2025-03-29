@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import nanoImage from '../assets/images/nanoImage.jpeg';
 import defense from '../assets/images/defense.png';
 import lasers from '../assets/images/lasers.png';
-import comingSoon from '../assets/images/comingSoonPage.jpeg';
+import mtnSports from '../assets/images/maiden.jpg';
+import martialArts from '../assets/images/bjj.jpeg';
+import ropeAccess from '../assets/images/ropepartner.JPG';
 import '../assets/css/style.css';
-
 
 function Projects() {
     return (
@@ -77,7 +78,7 @@ function Projects() {
                 <Col md={4} className="mb-4">
                     <Link to="/projects/rope-access" className="text-decoration-none">
                         <div className="project-card">
-                            <img src={comingSoon} alt="Coming Soon" className="project-img" />
+                            <img src={ropeAccess} alt="Coming Soon" className="project-img" />
                             <div className="project-content">
                                 <h3 className="project-title">Rope Access</h3>
                                 <p className="project-desc">Application of industrial climbing techniques to access difficult-to-reach work locations by use of rope systems.</p>
@@ -99,7 +100,7 @@ function Projects() {
                 <Col md={4} className="mb-4">
                     <Link to="/projects/martial-arts" className="text-decoration-none">
                         <div className="project-card">
-                            <img src={comingSoon} alt="Coming Soon" className="project-img" />
+                            <img src={martialArts} alt="Coming Soon" className="project-img" />
                             <div className="project-content">
                                 <h3 className="project-title">Mixed Martial Arts</h3>
                                 <p className="project-desc">Dedicated practitioner with over a decade of training, specializing in both gi and no-gi grappling alongside stand-up techniques for comprehensive combat proficiency.</p>
@@ -119,7 +120,7 @@ function Projects() {
                 <Col md={4} className="mb-4">
                     <Link to="/projects/mountain-sports" className="text-decoration-none">
                         <div className="project-card">
-                            <img src={comingSoon} alt="Coming Soon" className="project-img" />
+                            <img src={mtnSports} alt="Coming Soon" className="project-img" />
                             <div className="project-content">
                                 <h3 className="project-title">Mountain Sports</h3>
                                 <p className="project-desc">Adventure enthusiast exploring diverse mountain environments through various technical sports and wilderness activities.</p>
