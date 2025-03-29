@@ -565,6 +565,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-left: 150px;
     color: var(--body-text-color); 
 }
     
@@ -577,10 +578,34 @@ text-align: center;
     padding: 5px 10px;
     margin: 0 10px;
     transition: color 0.2s;
+    margin-left: 10px;
 }
     
 .carousel-control:hover {
     color: var(--terracotta);
+}
+
+/* Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 25px;
+    margin-left: 205px  !important;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(201, 203, 163, 0.5);
+    margin: -5px 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.indicator.active {
+    background-color: var(--terracotta); 
 }
 
 /* Publication card styling */
@@ -689,28 +714,6 @@ text-align: center;
 .view-publication-btn:hover {
     background-color: #E26D5C !important;
     color: white !important;
-}
-
-/* Indicators */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 15px;
-}
-
-.indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(201, 203, 163, 0.5);
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.indicator.active {
-    background-color: var(--terracotta); 
 }
 
 /* "See More" button styling */
