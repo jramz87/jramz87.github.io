@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.d66c1135.css",
-    "main.js": "/static/js/main.3a921e01.js",
+    "main.css": "/static/css/main.a92d4f5d.css",
+    "main.js": "/static/js/main.8b17f8a5.js",
     "static/js/453.338851cb.chunk.js": "/static/js/453.338851cb.chunk.js",
     "static/media/defense.png": "/static/media/defense.aec32cab516d666f83cf.png",
     "static/media/profile.png": "/static/media/profile.ff280601fcdfe7a4b80d.png",
     "static/media/couch2020.png": "/static/media/couch2020.5f7209b64faaf939f94e.png",
     "static/media/kilina2012.png": "/static/media/kilina2012.e6d584dae9d3d3a5fd88.png",
+    "static/media/bjj.jpeg": "/static/media/bjj.06afba65b113e792d40c.jpeg",
     "static/media/park2016.png": "/static/media/park2016.185b739ae21b9182168a.png",
     "static/media/lasers.png": "/static/media/lasers.a473e2d270942dcf10c6.png",
     "static/media/ramirez2013.png": "/static/media/ramirez2013.4be3c9a1906863b4f267.png",
     "static/media/nanoImage.jpeg": "/static/media/nanoImage.faa738baf49e93532a5d.jpeg",
+    "static/media/ropepartner.JPG": "/static/media/ropepartner.400801aa487d8a5f7d7a.JPG",
+    "static/media/maiden.jpg": "/static/media/maiden.7bd99b67ea85fc69a12f.jpg",
     "static/media/ramirez2009.png": "/static/media/ramirez2009.4cbccc40038c805fc5f0.png",
     "static/media/lajoie2010.png": "/static/media/lajoie2010.53ebae4ce750e4cef080.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -23,7 +26,6 @@
     "static/media/KaTeX_Main-BoldItalic.ttf": "/static/media/KaTeX_Main-BoldItalic.828abcb200061cffbaae.ttf",
     "static/media/KaTeX_Math-Italic.ttf": "/static/media/KaTeX_Math-Italic.8a5f936332e8028c7278.ttf",
     "static/media/KaTeX_Math-BoldItalic.ttf": "/static/media/KaTeX_Math-BoldItalic.bf2d440b3a42ea78a998.ttf",
-    "static/media/comingSoonPage.jpeg": "/static/media/comingSoonPage.3994c69eda1b7bfc6548.jpeg",
     "static/media/KaTeX_Main-Regular.woff": "/static/media/KaTeX_Main-Regular.4f35fbcc9ee8614c2bcc.woff",
     "static/media/KaTeX_Main-Bold.woff": "/static/media/KaTeX_Main-Bold.0c3b8929d377c0e9b2f3.woff",
     "static/media/KaTeX_AMS-Regular.woff2": "/static/media/KaTeX_AMS-Regular.73ea273a72f4aca30ca5.woff2",
@@ -78,12 +80,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
-    "main.d66c1135.css.map": "/static/css/main.d66c1135.css.map",
-    "main.3a921e01.js.map": "/static/js/main.3a921e01.js.map",
+    "main.a92d4f5d.css.map": "/static/css/main.a92d4f5d.css.map",
+    "main.8b17f8a5.js.map": "/static/js/main.8b17f8a5.js.map",
     "453.338851cb.chunk.js.map": "/static/js/453.338851cb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d66c1135.css",
-    "static/js/main.3a921e01.js"
+    "static/css/main.a92d4f5d.css",
+    "static/js/main.8b17f8a5.js"
   ]
 }
