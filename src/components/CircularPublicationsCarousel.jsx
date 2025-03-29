@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 
 function CircularPublicationsCarousel({ publications }) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
     
     const totalPublications = publications.length;
     
@@ -88,7 +89,6 @@ function CircularPublicationsCarousel({ publications }) {
                                 variant="outline-primary"
                                 size="sm"
                                 className="mt-2 view-publication-btn"
-                                style={{ borderColor: '#E26D5C', color: '#E26D5C' }}
                             >
                                 View Publication
                             </Button>

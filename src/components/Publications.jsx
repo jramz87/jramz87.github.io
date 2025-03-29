@@ -6,10 +6,19 @@ import { publications } from '../data/publications';
 
 function Publications() {
     const [showAllPublications, setShowAllPublications] = useState(false);
+    const [activeAccordion, setActiveAccordion] = useState(null);
     
     // Assume the first few publications are the selected ones
     const selectedPublications = publications.slice(0, 3); // Adjust the number as needed
     const additionalPublications = publications.slice(3); // The rest of the publications
+
+    const toggleAccordion = (index) => {
+        if (activeAccordion === index) {
+            setActiveAccordion(null);
+        } else {
+            setActiveAccordion(index);
+        }
+    };
     
     return (
         <section id="publications">
@@ -46,7 +55,45 @@ function Publications() {
                         
                         <Collapse in={showAllPublications}>
                             <div id="additional-publications" className="mt-3">
+                                {/* Desktop Carousel */}
                                 <CircularPublicationsCarousel publications={additionalPublications} />
+                                
+                                {/* Mobile Accordion */}
+                                <div className="mobile-publications-accordion">
+                                    {additionalPublications.map((pub, index) => (
+                                        <div key={pub.id}>
+                                            <div 
+                                                className="mobile-publication-header"
+                                                onClick={() => toggleAccordion(index)}
+                                            >
+                                                <span className="mobile-publication-title">{pub.title}</span>
+                                                <span>{activeAccordion === index ? '−' : '+'}</span>
+                                            </div>
+                                            
+                                            <Collapse in={activeAccordion === index}>
+                                                <div className="mobile-publication-content">
+                                                    <div className="publication-authors">{pub.authors}</div>
+                                                    <div className="publication-journal">
+                                                        {pub.journal} <span className="publication-year">{pub.year}</span>
+                                                    </div>
+                                                    {pub.abstract && (
+                                                        <div className="mt-2">{pub.abstract}</div>
+                                                    )}
+                                                    <Button 
+                                                        href={pub.link} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        variant="outline-primary"
+                                                        size="sm"
+                                                        className="mt-3 view-publication-btn"
+                                                    >
+                                                        View Publication
+                                                    </Button>
+                                                </div>
+                                            </Collapse>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </Collapse>
                     </div>
