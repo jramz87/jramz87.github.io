@@ -40,6 +40,13 @@ function Skills() {
                 </ul>
             </div>
         </div>
+
+        <div>
+            <h5>
+                To learn more please click on my CV link above or send me a message
+            </h5>
+        </div>
+
         </section>
     );
 }

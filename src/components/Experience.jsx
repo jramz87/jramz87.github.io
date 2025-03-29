@@ -35,6 +35,12 @@ function Experience() {
                     <li>Facilitated smooth technological integration during the acquisition of fiber-optic laser research division by Thorlabs</li>
                 </ul>
             </div>
+
+            <div>
+                <h5>
+                    To see a more detailed timeline of my work experience please click on my CV link above!
+                </h5>
+            </div>
         </section>
     );
 }

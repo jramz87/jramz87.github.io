@@ -138,10 +138,11 @@ function Contact() {
                             Please enter a message.
                         </Form.Control.Feedback>
                     </Form.Group>
-                    
                     <Button 
                         type="submit" 
-                        className="btn" 
+                        variant="outline-secondary"
+                        className="see-more-btn"
+                        style={{ borderColor: '#E26D5C', color: '#E26D5C' }}
                         disabled={loading}
                     >
                         {loading ? (
