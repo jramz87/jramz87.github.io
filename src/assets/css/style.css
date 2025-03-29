@@ -384,6 +384,46 @@ footer {
     background: rgba(201, 203, 163, 0.1);
 }
 
+.publication-item-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Thumbnail container */
+.publication-thumbnail-container {
+    flex: 0 0 100px; /* Fixed width for thumbnails */
+    align-self: flex-start;
+}
+
+/* Thumbnail image */
+.publication-thumbnail {
+width: 100%;
+height: 140px; /* Approximate A4 aspect ratio */
+object-fit: cover;
+border: 1px solid #C9CBA3;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.publication-thumbnail:hover {
+transform: scale(1.05);
+}
+
+/* Placeholder for when no image is available */
+.publication-thumbnail-placeholder {
+width: 100%;
+height: 140px;
+background-color: #f5f5f5;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #6c757d;
+border: 1px solid #C9CBA3;
+font-style: italic;
+font-size: 0.7rem;
+text-align: center;
+}
+
 .publication-title {
     font-weight: 500;
     margin-bottom: 5px;
@@ -437,6 +477,252 @@ footer {
     box-shadow: none;
 }
 
+/* Publication content (text part) */
+.publication-content {
+    flex: 1;
+}
+
+
+/* Publications Carousel Styling - Circular Stack Design */
+
+/* Main container */
+.circular-carousel-container {
+    position: relative;
+    width: 75%;
+    min-height: 600px;
+    padding: 20px 20px ;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Track that holds all items */
+.circular-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Individual carousel items */
+.carousel-item {
+    position: absolute;
+    transition: all 0.5s ease;
+    width: auto;
+    height: auto;
+    top: 0;
+    border: 1px solid transparent;
+}
+
+/* Previous item styling */
+.carousel-item.prev {
+    transform: none; /* Remove default transform */
+    position: absolute;
+    left: 0%; /* Position far enough left */
+    top: 25%;
+    z-index: 1;
+    opacity: 0.7;
+    filter: grayscale(70%);
+    cursor: pointer;
+    display: block !important; /* Force display */
+    scale: 1.5;
+    max-width: 40%;
+    transform: translateX(-20%);
+}
+
+/* Active item styling */
+.carousel-item.active {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-25%); 
+    top: 0;
+    z-index: 5;
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Next item styling */
+.carousel-item.next {
+    position: absolute;
+    right: 0%; /* Position far enough right */
+    top: 25%;
+    z-index: 1;
+    opacity: 0.7;
+    filter: grayscale(70%);
+    cursor: pointer;
+    display: block !important; /* Force display */
+    scale: 1.5;
+    max-width: 40%;
+    transform: translateX(-70%);
+}
+
+/* Carousel controls */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--body-text-color); 
+}
+    
+.carousel-control {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--body-text-color); /* Changed to use your variable */
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+    
+.carousel-control:hover {
+    color: var(--terracotta);
+}
+
+/* Publication card styling */
+.publication-card {
+    width: 700px;
+    max-width: 90%;
+    background-color: var(--body-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(71, 45, 48, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C9CBA3;
+}
+
+/* Image container */
+.publication-image-container {
+    height: 300px;
+    overflow: hidden;
+    background-color: #F8F7F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Publication image */
+.publication-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item.active .publication-image:hover {
+    transform: scale(1.05);
+}
+
+/* Placeholder for when no image is available */
+.publication-image-placeholder {
+    width: 210px;
+    height: 297px; /* A4 paper ratio */
+    background-color: #F8F7F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--body-text-color);
+    border: 1px solid #C9CBA3;
+    font-style: italic;
+}
+
+/* Publication details */
+.publication-details {
+    padding: 20px;
+}
+
+.publication-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--body-heading-color);
+}
+
+.publication-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.publication-title a:hover {
+    color: #E26D5C;
+}
+
+.publication-authors {
+    font-size: 0.9rem;
+    color: var(--body-text-color); 
+    margin-bottom: 8px;
+}
+
+.publication-journal {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--burgundy);
+    margin-bottom: 15px;
+}
+
+.publication-year {
+    font-weight: bold;
+}
+
+.publication-abstract {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 15px 0;
+    max-height: 100px;
+    overflow-y: auto;
+    color: var(--body-text-color);
+    border-left: 2px solid rgba(226, 109, 92, 0.3);
+    padding-left: 10px; 
+}
+
+/* "View Publication" button */
+.view-publication-btn {
+    border-color: #E26D5C !important;
+    color: #E26D5C !important;
+}
+
+.view-publication-btn:hover {
+    background-color: #E26D5C !important;
+    color: white !important;
+}
+
+/* Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(201, 203, 163, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.indicator.active {
+    background-color: var(--terracotta); 
+}
+
+/* "See More" button styling */
+.see-more-btn {
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: #E26D5C !important;
+    color: white !important;
+    }
+
 /* CV Specific */
 .cv-container {
     padding: 30px;
@@ -457,5 +743,23 @@ footer {
     
     .skills {
         flex-direction: column;
+    }
+
+    .publication-card {
+        width: 90vw;
+    }
+    
+    .carousel-item.prev,
+    .carousel-item.next {
+        display: none;
+    }
+
+    .publication-item-content {
+        flex-direction: column;
+    }
+    
+    .publication-thumbnail-container {
+    width: 100px;
+    margin: 0 auto 15px;
     }
 }

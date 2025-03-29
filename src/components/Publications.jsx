@@ -1,55 +1,22 @@
 import React, { useState } from 'react';
-import { Container, OverlayTrigger, Tooltip, Button, Collapse } from 'react-bootstrap';
+import { Container, Button, Collapse } from 'react-bootstrap';
+import PublicationItem from './PublicationItem';
+import CircularPublicationsCarousel from './CircularPublicationsCarousel';
 import { publications } from '../data/publications';
 
-// Publication component with collapsible abstract
-function PublicationItem({ id, title, authors, journal, year, abstract, link }) {
-    const [open, setOpen] = useState(false);
+function Publications() {
+    const [showAllPublications, setShowAllPublications] = useState(false);
     
-    return (
-        <div className="publication-item">
-            <div className="publication-title">
-                <OverlayTrigger
-                placement="top"
-                overlay={<Tooltip>Click to view publication</Tooltip>}
-                >
-                <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
-                </OverlayTrigger>
-            </div>
-        <div className="publication-authors">{authors}</div>
-        <div className="publication-journal">
-            {journal} <span className="publication-year">{year}</span>
-            {abstract && (
-                <Button 
-                    variant="link" 
-                    onClick={() => setOpen(!open)}
-                    aria-controls={`abstract-collapse-${id}`}
-                    aria-expanded={open}
-                    className="p-0 ms-2"
-                    style={{ color: '#E26D5C', textDecoration: 'none' }}
-                >
-                    {open ? 'Hide Abstract' : 'Show Abstract'}
-                </Button>
-            )}
-        </div>
-        {abstract && (
-            <Collapse in={open}>
-                <div id={`abstract-collapse-${id}`} className="mt-2">
-                    {abstract}
-                </div>
-            </Collapse>
-        )}
-        </div>
-    );
-    }
-
-    function Publications() {
+    // Assume the first few publications are the selected ones
+    const selectedPublications = publications.slice(0, 3); // Adjust the number as needed
+    const additionalPublications = publications.slice(3); // The rest of the publications
+    
     return (
         <section id="publications">
             <Container>
                 <h2>Selected Publications</h2>
                 <div className="publication-list">
-                    {publications.map((pub) => (
+                    {selectedPublications.map((pub) => (
                         <PublicationItem 
                             key={pub.id}
                             id={pub.id}
@@ -59,9 +26,31 @@ function PublicationItem({ id, title, authors, journal, year, abstract, link }) 
                             year={pub.year}
                             link={pub.link}
                             abstract={pub.abstract}
+                            firstPageImage={pub.firstPageImage} // Pass the image to the component
                         />
                     ))}
                 </div>
+                
+                {additionalPublications.length > 0 && (
+                    <div className="see-more-publications mt-4">
+                        <Button
+                            onClick={() => setShowAllPublications(!showAllPublications)}
+                            aria-controls="additional-publications"
+                            aria-expanded={showAllPublications}
+                            variant="outline-secondary"
+                            className="w-100 see-more-btn"
+                            style={{ borderColor: '#E26D5C', color: '#E26D5C' }}
+                        >
+                            {showAllPublications ? 'Hide More Publications' : 'See More Publications'}
+                        </Button>
+                        
+                        <Collapse in={showAllPublications}>
+                            <div id="additional-publications" className="mt-3">
+                                <CircularPublicationsCarousel publications={additionalPublications} />
+                            </div>
+                        </Collapse>
+                    </div>
+                )}
             </Container>
         </section>
     );

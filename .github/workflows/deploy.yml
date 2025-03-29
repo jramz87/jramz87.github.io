@@ -23,13 +23,6 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Update package.json with homepage
-        run: |
-          # Add homepage field to package.json if it doesn't exist
-          if ! grep -q '"homepage"' package.json; then
-            sed -i 's/"name": "/"name": "/; s/,/,"homepage": ".",/' package.json
-          fi
-
       - name: Build
         env:
           REACT_APP_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
@@ -40,9 +33,6 @@ jobs:
       - name: Create .nojekyll file
         run: touch build/.nojekyll
         
-      - name: Remove source map references
-        run: find build -name "*.js" -exec sed -i -e 's/\/\/# sourceMappingURL=.*$//' {} \;
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
