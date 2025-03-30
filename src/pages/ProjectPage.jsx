@@ -118,7 +118,7 @@ const projectData = {
         'Competition experience in regional Brazilian Jiu-Jitsu tournaments',
         'Training in specialized gyms across multiple countries',
         'Cross-training approach incorporating multiple disciplines',
-        'Developed curriculum for beginners in grappling fundamentals',
+        'Extensive training in both gi and nogi grappling',
         'Focus on both sport and self-defense applications of martial arts techniques'
         ]
     },
@@ -136,7 +136,7 @@ const projectData = {
         'Technical canyoneering descents requiring rope techniques',
         'Whitewater packrafting in alpine environments',
         'Extended wilderness journeys combining multiple mountain disciplines',
-        'Alpine rock climbing in the Cascades and Sierra Nevada'
+        'Alpine rock climbing in the Front Range of Colorado'
         ]
     }
 };
