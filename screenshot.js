@@ -27,7 +27,7 @@ async function takeHomeScreenshot() {
       fullPage: false
     });
     
-    console.log('✅ Screenshot saved to ./screenshots/homepage.png');
+    console.log('Screenshot saved to ./screenshots/homepage.png');
   } catch (error) {
     console.error('Error taking screenshot:', error);
   } finally {
