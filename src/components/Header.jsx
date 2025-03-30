@@ -19,7 +19,7 @@ function Header() {
     <>
       <Navbar expand="lg" className="navbar-dark" style={{ backgroundColor: '#723D46' }}>
         <Container>
-          <Navbar.Brand as={Link} to="/">Jessica Ramirez</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">

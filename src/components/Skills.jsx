@@ -1,11 +1,17 @@
 import React from 'react';
 import 'katex/dist/katex.min.css';
 import { InlineMath } from 'react-katex';
+import { useLocation, Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 function Skills() {
+    const location = useLocation();
+    
+    const isHomePage = location.pathname === '/';
+
     return (
         <section id="skills">
-        <h2>Skills & Expertise</h2>
+        <h2>Skills & Certifications</h2>
         <div className="skills">
             <div className="skill-category">
                 <h3>Scientific Expertise</h3>
@@ -41,11 +47,27 @@ function Skills() {
             </div>
         </div>
 
-        <div>
-            <h5>
-                To learn more please click on my CV link above or send me a message
-            </h5>
-        </div>
+        {!isHomePage && (
+            <div className="skills-full-content">
+                <h5>
+                    This page is currently in progress! Check back soon!
+                </h5>
+            </div>
+        )}
+
+            {isHomePage && (
+            <div className="read-more-container">
+                <Link to="/skills">
+                    <Button
+                        variant="outline-secondary"
+                        className="w-100 see-more-btn"
+                        style={{ borderColor: '#E26D5C', color: '#E26D5C' }}
+                    >
+                        See More Skills & Certifications
+                    </Button>
+                </Link>
+            </div>
+            )}
 
         </section>
     );

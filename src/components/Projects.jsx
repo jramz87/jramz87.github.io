@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useLocation, Link } from 'react-router-dom';
 import nanoImage from '../assets/images/nanoImage.jpeg';
 import defense from '../assets/images/defense.png';
 import lasers from '../assets/images/lasers.png';
@@ -10,6 +10,10 @@ import ropeAccess from '../assets/images/ropepartner.JPG';
 import '../assets/css/style.css';
 
 function Projects() {
+    const location = useLocation();
+    
+    const isHomePage = location.pathname === '/';
+
     return (
         <section id="projects">
         <Container>
@@ -73,71 +77,89 @@ function Projects() {
                     </Link>
                 </Col>
             </Row>
-            
-            <Row className="mt-4">
-                <Col md={4} className="mb-4">
-                    <Link to="/projects/rope-access" className="text-decoration-none">
-                        <div className="project-card">
-                            <img src={ropeAccess} alt="Coming Soon" className="project-img" />
-                            <div className="project-content">
-                                <h3 className="project-title">Rope Access</h3>
-                                <p className="project-desc">Application of industrial climbing techniques to access difficult-to-reach work locations by use of rope systems.</p>
-                                <div className="project-tags">
-                                    <span className="tag">Wind Turbine Repair</span>
-                                    <span className="tag">Rope Rescue</span>
-                                    <span className="tag">Composite Layups</span>
-                                    <span className="tag">Abseiling</span>
-                                    <span className="tag">Technical Rigging</span>
-                                    <span className="tag">Confined Space</span>
-                                    <span className="tag">Rappelling</span>
-                                    <span className="tag">Rescue and Triage</span>
+
+            {!isHomePage && (
+                <div className="projects-full-content">
+                    <Row className="mt-4">
+                        <Col md={4} className="mb-4">
+                            <Link to="/projects/rope-access" className="text-decoration-none">
+                                <div className="project-card">
+                                    <img src={ropeAccess} alt="Coming Soon" className="project-img" />
+                                    <div className="project-content">
+                                        <h3 className="project-title">Rope Access</h3>
+                                        <p className="project-desc">Application of industrial climbing techniques to access difficult-to-reach work locations by use of rope systems.</p>
+                                        <div className="project-tags">
+                                            <span className="tag">Wind Turbine Repair</span>
+                                            <span className="tag">Rope Rescue</span>
+                                            <span className="tag">Composite Layups</span>
+                                            <span className="tag">Abseiling</span>
+                                            <span className="tag">Technical Rigging</span>
+                                            <span className="tag">Confined Space</span>
+                                            <span className="tag">Rappelling</span>
+                                            <span className="tag">Rescue and Triage</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </Link>
-                </Col>
-                
-                <Col md={4} className="mb-4">
-                    <Link to="/projects/martial-arts" className="text-decoration-none">
-                        <div className="project-card">
-                            <img src={martialArts} alt="Coming Soon" className="project-img" />
-                            <div className="project-content">
-                                <h3 className="project-title">Mixed Martial Arts</h3>
-                                <p className="project-desc">Dedicated practitioner with over a decade of training, specializing in both gi and no-gi grappling alongside stand-up techniques for comprehensive combat proficiency.</p>
-                                <div className="project-tags">
-                                    <span className="tag">Brazilian Jiu-Jitsu</span>
-                                    <span className="tag">Muay Thai</span>
-                                    <span className="tag">Wrestling</span>
-                                    <span className="tag">Judo</span>
-                                    <span className="tag">Kickboxing</span>
-                                    <span className="tag">Competition Experience</span>
+                            </Link>
+                        </Col>
+                        
+                        <Col md={4} className="mb-4">
+                            <Link to="/projects/martial-arts" className="text-decoration-none">
+                                <div className="project-card">
+                                    <img src={martialArts} alt="Coming Soon" className="project-img" />
+                                    <div className="project-content">
+                                        <h3 className="project-title">Mixed Martial Arts</h3>
+                                        <p className="project-desc">Dedicated practitioner with over a decade of training, specializing in both gi and no-gi grappling alongside stand-up techniques for comprehensive combat proficiency.</p>
+                                        <div className="project-tags">
+                                            <span className="tag">Brazilian Jiu-Jitsu</span>
+                                            <span className="tag">Muay Thai</span>
+                                            <span className="tag">Wrestling</span>
+                                            <span className="tag">Judo</span>
+                                            <span className="tag">Kickboxing</span>
+                                            <span className="tag">Competition Experience</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </Link>
-                </Col>
-                
-                <Col md={4} className="mb-4">
-                    <Link to="/projects/mountain-sports" className="text-decoration-none">
-                        <div className="project-card">
-                            <img src={mtnSports} alt="Coming Soon" className="project-img" />
-                            <div className="project-content">
-                                <h3 className="project-title">Mountain Sports</h3>
-                                <p className="project-desc">Adventure enthusiast exploring diverse mountain environments through various technical sports and wilderness activities.</p>
-                                <div className="project-tags">
-                                    <span className="tag">Rock Climbing</span>
-                                    <span className="tag">Bouldering</span>
-                                    <span className="tag">Backcountry Splitboarding</span>
-                                    <span className="tag">Whitewater Packrafting</span>
-                                    <span className="tag">Mountain Biking</span>
-                                    <span className="tag">Trail Running</span>
-                                    <span className="tag">Canyoneering</span>
+                            </Link>
+                        </Col>
+                        
+                        <Col md={4} className="mb-4">
+                            <Link to="/projects/mountain-sports" className="text-decoration-none">
+                                <div className="project-card">
+                                    <img src={mtnSports} alt="Coming Soon" className="project-img" />
+                                    <div className="project-content">
+                                        <h3 className="project-title">Mountain Sports</h3>
+                                        <p className="project-desc">Adventure enthusiast exploring diverse mountain environments through various technical sports and wilderness activities.</p>
+                                        <div className="project-tags">
+                                            <span className="tag">Rock Climbing</span>
+                                            <span className="tag">Bouldering</span>
+                                            <span className="tag">Backcountry Splitboarding</span>
+                                            <span className="tag">Whitewater Packrafting</span>
+                                            <span className="tag">Mountain Biking</span>
+                                            <span className="tag">Trail Running</span>
+                                            <span className="tag">Canyoneering</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </Link>
-                </Col>
-            </Row>
+                            </Link>
+                        </Col>
+                    </Row>
+                </div>
+            )}
+
+            {isHomePage && (
+            <div className="read-more-container">
+                <Link to="/projects">
+                    <Button
+                        variant="outline-secondary"
+                        className="w-100 see-more-btn"
+                        style={{ borderColor: '#E26D5C', color: '#E26D5C' }}
+                    >
+                        See More Projects
+                    </Button>
+                </Link>
+            </div>
+            )}
         </Container>
         </section>
     );
