@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.605c4d13.css",
-    "main.js": "/static/js/main.e17680e0.js",
+    "main.js": "/static/js/main.58299705.js",
     "static/js/453.338851cb.chunk.js": "/static/js/453.338851cb.chunk.js",
     "static/media/defense.png": "/static/media/defense.aec32cab516d666f83cf.png",
     "static/media/profile.png": "/static/media/profile.ff280601fcdfe7a4b80d.png",
@@ -81,11 +81,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.605c4d13.css.map": "/static/css/main.605c4d13.css.map",
-    "main.e17680e0.js.map": "/static/js/main.e17680e0.js.map",
+    "main.58299705.js.map": "/static/js/main.58299705.js.map",
     "453.338851cb.chunk.js.map": "/static/js/453.338851cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.605c4d13.css",
-    "static/js/main.e17680e0.js"
+    "static/js/main.58299705.js"
   ]
 }
