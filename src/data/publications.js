@@ -52,7 +52,7 @@ export const publications = [
         authors: "J. J. Ramirez, D. S. Kilin and D. A. Micha",
         journal: "International Journal of Quantum Chemistry",
         year: "2009",
-        link: "https://doi-org.oregonstate.idm.oclc.org/10.1002/qua.22436",
+        link: "https://onlinelibrary.wiley.com/doi/10.1002/qua.22436",
         abstract: ramirez2009Abstract,
         firstPageImage: ramirez2009Image
     },
@@ -62,7 +62,7 @@ export const publications = [
         authors: "T. W. Lajoie, J. J. Ramirez, D. S. Kilin and D. A. Micha",
         journal: "International Journal of Quantum Chemistry",
         year: "2010",
-        link: "https://doi-org.oregonstate.idm.oclc.org/10.1002/qua.22906",
+        link: "https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.22906",
         abstract: lajoie2010Abstract,
         firstPageImage: lajoie2010Image
     },
@@ -72,7 +72,7 @@ export const publications = [
         authors: "J. J. Ramirez, D. S. Kilin and D. A. Micha",
         journal: "International Journal of Quantum Chemistry",
         year: "2011",
-        link: "https://doi-org.oregonstate.idm.oclc.org/10.1002/qua.23228",
+        link: "https://onlinelibrary.wiley.com/doi/10.1002/qua.23228",
         abstract: ramirez2011Abstract,
         firstPageImage: ramirez2011Image
     },
