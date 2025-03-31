@@ -11,7 +11,7 @@ function About() {
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am an experienced researcher and scientist specializing in laser technology, materials science, computational quantum chemistry, and data analysis. With expertise in both theoretical and experimental chemical physics, my current focus is on optical engineering and advanced photonics applications. Based in Oklahoma City, I bring a strong foundation in scientific research and technical problem-solving to a wide range of research and development projects.
+        I am an experienced researcher and scientist specializing in laser technology, materials science, computational quantum chemistry and data analysis. With expertise in both theoretical and experimental chemical physics, my current focus is on optical engineering and advanced photonics applications. Based in Oklahoma City, I bring a strong foundation in scientific research and technical problem-solving to a wide range of research and development projects.
       </p>
       
       {!isHomePage && (
