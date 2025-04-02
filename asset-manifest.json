@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.605c4d13.css",
-    "main.js": "/static/js/main.16c0d965.js",
+    "main.js": "/static/js/main.bb4f64c8.js",
     "static/js/453.338851cb.chunk.js": "/static/js/453.338851cb.chunk.js",
-    "static/media/defense.png": "/static/media/defense.aec32cab516d666f83cf.png",
+    "static/media/defense.png": "/static/media/defense.963d6a62054104265dd5.png",
     "static/media/profile.png": "/static/media/profile.ff280601fcdfe7a4b80d.png",
     "static/media/couch2020.png": "/static/media/couch2020.5f7209b64faaf939f94e.png",
     "static/media/kilina2012.png": "/static/media/kilina2012.e6d584dae9d3d3a5fd88.png",
@@ -81,11 +81,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/index.html",
     "main.605c4d13.css.map": "/static/css/main.605c4d13.css.map",
-    "main.16c0d965.js.map": "/static/js/main.16c0d965.js.map",
+    "main.bb4f64c8.js.map": "/static/js/main.bb4f64c8.js.map",
     "453.338851cb.chunk.js.map": "/static/js/453.338851cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.605c4d13.css",
-    "static/js/main.16c0d965.js"
+    "static/js/main.bb4f64c8.js"
   ]
 }
